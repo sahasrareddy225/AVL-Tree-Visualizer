@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVL Tree Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>AVL Tree Visualizer</h1>
+        <p class="subtitle">Interactive AVL Tree Insertion & Visualization</p>
+
+        <div class="controls">
+            <input type="number" id="valueInput" placeholder="Enter value">
+            <button id="insertBtn">Insert</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
+        <div class="info">
+            <div>
+                <span>Last Operation</span>
+                <strong id="operation">None</strong>
+            </div>
+
+            <div>
+                <span>Root</span>
+                <strong id="rootValue">-</strong>
+            </div>
+
+            <div>
+                <span>Nodes</span>
+                <strong id="nodeCount">0</strong>
+            </div>
+        </div>
+
+        <div class="tree-container" id="treeContainer">
+            <p class="empty-message">Insert a value to create the AVL tree</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

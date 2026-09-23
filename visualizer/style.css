@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 35px 0 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 44px;
+    margin-bottom: 12px;
+    color: #172b4d;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 20px;
+    color: #64748b;
+    margin-bottom: 36px;
+}
+
+
+/* =========================
+   CONTROLS
+   ========================= */
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+#valueInput {
+    width: 270px;
+    height: 55px;
+    padding: 0 15px;
+    border: 2px solid #111827;
+    border-radius: 9px;
+    font-size: 18px;
+    outline: none;
+}
+
+#valueInput:focus {
+    border-color: #2563eb;
+}
+
+#insertBtn,
+#resetBtn {
+    height: 55px;
+    padding: 0 28px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#insertBtn {
+    background: #2563eb;
+}
+
+#insertBtn:hover {
+    background: #1d4ed8;
+}
+
+#resetBtn {
+    background: #374151;
+}
+
+#resetBtn:hover {
+    background: #1f2937;
+}
+
+
+/* =========================
+   INFORMATION CARDS
+   ========================= */
+
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 38px;
+}
+
+.info > div {
+    min-width: 140px;
+    padding: 18px 28px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.info > div:first-child {
+    min-width: 190px;
+}
+
+.info span {
+    display: block;
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.info strong {
+    display: block;
+    font-size: 23px;
+    color: #1f2937;
+}
+
+
+/* =========================
+   TREE CONTAINER
+   ========================= */
+
+.tree-container {
+    width: 100%;
+    min-height: 500px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 45px 30px;
+
+    overflow: auto;
+}
+
+.empty-message {
+    color: #64748b;
+    font-size: 18px;
+    margin-top: 150px;
+}
+
+
+/* =========================
+   SVG AVL TREE
+   ========================= */
+
+.avl-svg {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* CONNECTION LINES */
+
+.tree-line {
+    stroke: #475569;
+    stroke-width: 3;
+    stroke-linecap: round;
+}
+
+
+/* TREE NODES */
+
+circle.tree-node {
+    fill: #0880ef;
+    stroke: white;
+    stroke-width: 3;
+}
+
+
+/* NODE VALUES */
+
+.tree-node-text {
+    fill: white;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .controls {
+        flex-wrap: wrap;
+    }
+
+    #valueInput {
+        width: 220px;
+    }
+
+    .info {
+        flex-wrap: wrap;
+    }
+
+    .tree-container {
+        min-height: 400px;
+    }
+}
